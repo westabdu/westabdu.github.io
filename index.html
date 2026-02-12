@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeinth Studios</title>
+    <meta name="description" content="Zeinth Studios - Discord Bot Geliştirme, Oyun Geliştirme ve Dijital Çözümler">
+    <!-- CSS -->
+    <style>
+        /* ZEINTH STUDIOS - ANA STİL */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0a0f1e 0%, #1a1f2e 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(45deg, #5865F2, #9B59B6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+            opacity: 0.8;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+            color: #5865F2;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, #a0a0ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #a0a0a0;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #5865F2, #9B59B6);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(88, 101, 242, 0.4);
+        }
+
+        /* PROJELER */
+        .projects {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #5865F2;
+            background: rgba(88, 101, 242, 0.1);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .card p {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+
+        .card-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #5865F2;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 50px;
+            color: #a0a0a0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">Zeinth Studios</div>
+            <div class="nav-links">
+                <a href="#home">Ana Sayfa</a>
+                <a href="#projects">Projeler</a>
+                <a href="https://discord.gg/zeinth">Discord</a>
+                <a href="https://github.com/westabdu">GitHub</a>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <h1>Zeinth Studios</h1>
+            <p>Discord bot geliştirme, oyun yapımı ve dijital çözümler. Hayal et, biz kodlayalım.</p>
+            <a href="#projects" class="btn">Projeleri Gör</a>
+        </section>
+
+        <!-- PROJELER -->
+        <section id="projects" class="projects">
+            <h2 class="section-title">🛠️ Aktif Projeler</h2>
+            <div class="card-grid">
+                <!-- ZEINTH MODERATION -->
+                <div class="card">
+                    <span class="card-badge">🟢 7/24 Aktif</span>
+                    <h3>🤖 Zeinth Moderation</h3>
+                    <p>68 komutlu, devasa ekonomi sistemi, moderasyon, eğlence ve seviye botu. 30+ ekonomi komutu, hisse senedi, pet, iş sistemi ve daha fazlası.</p>
+                    <a href="#" class="btn" style="padding: 10px 25px; font-size: 14px;">Detaylar</a>
+                </div>
+                <!-- SUPERMARKET TOGETHER -->
+                <div class="card">
+                    <span class="card-badge">🔵 Geliştirme</span>
+                    <h3>🎮 Supermarket Together</h3>
+                    <p>Supermarket işletme simülasyonu. Arkadaşlarınla birlikte marketini yönet, rakiplerine karşı yarış.</p>
+                    <a href="#" class="btn" style="padding: 10px 25px; font-size: 14px;">Yakında</a>
+                </div>
+                <!-- YAKINDA -->
+                <div class="card">
+                    <span class="card-badge">🟣 Planlama</span>
+                    <h3>✨ Yeni Proje</h3>
+                    <p>Çok yakında...</p>
+                    <a href="#" class="btn" style="padding: 10px 25px; font-size: 14px;">?</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- İSTATİSTİKLER -->
+        <section style="padding: 50px 0;">
+            <div class="card-grid">
+                <div class="card" style="text-align: center;">
+                    <h2 style="font-size: 48px; margin-bottom: 10px; background: linear-gradient(45deg, #5865F2, #9B59B6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">68</h2>
+                    <p style="color: #fff; font-size: 18px;">Discord Komutu</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h2 style="font-size: 48px; margin-bottom: 10px; background: linear-gradient(45deg, #5865F2, #9B59B6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">7/24</h2>
+                    <p style="color: #fff; font-size: 18px;">Aktif Bot</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h2 style="font-size: 48px; margin-bottom: 10px; background: linear-gradient(45deg, #5865F2, #9B59B6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">33</h2>
+                    <p style="color: #fff; font-size: 18px;">Ekonomi Komutu</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>© 2026 Zeinth Studios. Tüm hakları saklıdır.</p>
+            <p style="margin-top: 20px; font-size: 14px;">
+                <a href="#" style="color: #5865F2; text-decoration: none;">Discord</a> • 
+                <a href="#" style="color: #5865F2; text-decoration: none;">GitHub</a> • 
+                <a href="#" style="color: #5865F2; text-decoration: none;">İletişim</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // ZEINTH STUDIOS - BASİT ANİMASYONLAR
+        console.log('Zeinth Studios Web Sitesi Aktif!');
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
