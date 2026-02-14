@@ -98,46 +98,46 @@
             <p style="color: #b0b0b0; font-size: 18px;">Zeinth Moderation · Gerçek zamanlı istatistikler</p>
         </section>
 
-        <!-- ANA İSTATİSTİKLER (WPM KALDIRILDI) -->
+        <!-- ANA İSTATİSTİKLER (Canlı veri JS ile güncellenecek) -->
         <div class="stat-panel">
             <div class="stat-row">
                 <div class="stat-big">
-                    <div class="number">68+</div>
+                    <div class="number" id="totalCommands">72+</div>
                     <div style="color: #fff; font-size: 18px; margin-top: 10px;">Toplam Komut</div>
                     <span class="mini-badge"><i class="fas fa-tag"></i> 33 ekonomi</span>
                 </div>
                 <div class="stat-big">
-                    <div class="number">1</div>
+                    <div class="number" id="serverCount">1</div>
                     <div style="color: #fff; font-size: 18px; margin-top: 10px;">Aktif Sunucu</div>
                     <span class="mini-badge"><i class="fas fa-lock"></i> özel</span>
                 </div>
                 <div class="stat-big">
-                    <div class="number">7/24</div>
+                    <div class="number" id="uptime">7/24</div>
                     <div style="color: #fff; font-size: 18px; margin-top: 10px;">Uptime</div>
                     <span class="mini-badge"><i class="fas fa-cloud"></i> Koyeb</span>
                 </div>
             </div>
 
-            <!-- KOMPOZİSYON ÇUBUĞU (AYNI) -->
+            <!-- KOMPOZİSYON ÇUBUĞU (sabit yüzdeler) -->
             <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px;">
                 <div class="progress-section">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
                         <span style="color: #fff;">Komut Kategorileri</span>
-                        <span style="color: #5865F2;">68/68</span>
+                        <span style="color: #5865F2;">72/72</span>
                     </div>
                     <div style="margin-bottom: 15px;">
                         <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
                             <span>Ekonomi</span>
                             <span>33</span>
                         </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 48%;"></div></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 46%;"></div></div>
                     </div>
                     <div style="margin-bottom: 15px;">
                         <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
                             <span>Moderasyon</span>
                             <span>16</span>
                         </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 23%;"></div></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 22%;"></div></div>
                     </div>
                     <div style="margin-bottom: 15px;">
                         <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
@@ -151,7 +151,14 @@
                             <span>Seviye</span>
                             <span>4</span>
                         </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 6%;"></div></div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 5.5%;"></div></div>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
+                            <span>Özel Komutlar</span>
+                            <span>3</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 4%;"></div></div>
                     </div>
                 </div>
                 <div class="progress-section" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -163,7 +170,7 @@
             </div>
         </div>
 
-        <!-- KONTROL PANELİ -->
+        <!-- KONTROL PANELİ (hazır) -->
         <div style="margin: 60px 0;">
             <div class="card" style="text-align: center; padding: 50px;">
                 <i class="fas fa-code-branch" style="font-size: 64px; color: #5865F2; margin-bottom: 25px;"></i>
@@ -183,8 +190,45 @@
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank"><i class="fab fa-discord"></i></a>
                 <a href="mailto:iletisim@zenith.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>© 2026 Zeinth Studios · Dashboard v0.3 · Gerçek zamanlı veriler yakında</p>
+            <p>© 2026 Zeinth Studios · Dashboard v1.0 · Gerçek zamanlı veriler aktif</p>
         </footer>
     </div>
+
+    <!-- JavaScript: Gerçek zamanlı veri çekme -->
+    <script>
+        async function fetchBotStats() {
+            try {
+                // 🔁 BOTUN KOYEB URL'SİNİ BURAYA YAZ (kendi URL'n ile değiştir!)
+                const API_URL = 'https://zeinth-moderation-org.koyeb.app/api/bot-stats'; 
+                const response = await fetch(API_URL);
+                const data = await response.json();
+
+                if (data.success) {
+                    // Toplam komut sayısı (data.totalCommands)
+                    document.getElementById('totalCommands').innerText = data.data.totalCommands + '+';
+                    // Aktif sunucu sayısı
+                    document.getElementById('serverCount').innerText = data.data.serverCount;
+                    // Uptime (saniye -> gün/saat formatı)
+                    const uptimeSeconds = data.data.uptime;
+                    const hours = Math.floor(uptimeSeconds / 3600);
+                    const days = Math.floor(hours / 24);
+                    if (days > 0) {
+                        document.getElementById('uptime').innerText = days + ' gün';
+                    } else if (hours > 0) {
+                        document.getElementById('uptime').innerText = hours + ' saat';
+                    } else {
+                        document.getElementById('uptime').innerText = '7/24';
+                    }
+                }
+            } catch (error) {
+                console.error('API hatası:', error);
+                // Hata durumunda mevcut değerler kalsın.
+            }
+        }
+
+        // Sayfa yüklendiğinde ve her 60 saniyede bir güncelle
+        window.addEventListener('load', fetchBotStats);
+        setInterval(fetchBotStats, 60000);
+    </script>
 </body>
 </html>
