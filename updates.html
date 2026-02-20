@@ -15,6 +15,20 @@
     <div class="cyber-grid"></div>
     <div class="grid-highlight"></div>
 
+    <!-- Jarvis Floating Widget -->
+    <div class="jarvis-widget">
+        <div class="jarvis-ring">
+            <i class="fas fa-brain"></i>
+        </div>
+        <div class="jarvis-panel">
+            <h4>⚡ JARVIS STATUS</h4>
+            <p><span class="status">SYSTEM:</span> ONLINE</p>
+            <p><span class="status">LOCATION:</span> MERSIN</p>
+            <p><span class="status">MISSION:</span> 12 MARCH PREP</p>
+            <p><span class="status">UPTIME:</span> 7/24</p>
+        </div>
+    </div>
+
     <div class="container">
         <nav class="navbar">
             <div class="logo">ZEINTH<span>studios</span></div>
@@ -50,29 +64,43 @@
             </div>
             
             <div class="terminal-line" style="animation-delay: 0.2s;">
-                <span class="output">v2.1.4 (HEAD -> main) Jarvis AI üçlü model entegrasyonu tamamlandı</span>
+                <span class="output">v2.2.0 (HEAD -> main) Bento Grid ana sayfa mimarisi eklendi</span>
             </div>
             
             <div class="terminal-line" style="animation-delay: 0.3s;">
-                <span class="output">v2.1.3 Dashboard'a gerçek zamanlı istatistikler eklendi</span>
+                <span class="output">v2.1.4 Jarvis AI üçlü model entegrasyonu tamamlandı</span>
             </div>
             
             <div class="terminal-line" style="animation-delay: 0.4s;">
-                <span class="output">v2.1.2 Chaos Market oyun motoru iyileştirmeleri</span>
+                <span class="output">v2.1.3 Dashboard'a gerçek zamanlı istatistikler eklendi</span>
             </div>
             
             <div class="terminal-line" style="animation-delay: 0.5s;">
-                <span class="output">v2.1.1 Zeinth Moderation'a özel komut sistemi eklendi</span>
+                <span class="output">v2.1.2 Chaos Market oyun motoru iyileştirmeleri</span>
             </div>
             
             <div class="terminal-line" style="animation-delay: 0.6s;">
-                <span class="output">v2.1.0 Web sitesi monochrome & glass temaya güncellendi</span>
+                <span class="output">v2.1.1 Zeinth Moderation'a özel komut sistemi eklendi</span>
             </div>
             
             <div class="terminal-line" style="animation-delay: 0.7s;">
+                <span class="output">v2.1.0 Web sitesi monochrome purple temaya güncellendi</span>
+            </div>
+            
+            <div class="terminal-line" style="animation-delay: 0.8s;">
                 <span class="prompt">$</span>
                 <span class="command">_</span>
             </div>
+        </div>
+
+        <!-- Heavy-Duty Buttons -->
+        <div style="display: flex; gap: 20px; justify-content: center; margin: 60px 0;">
+            <a href="https://github.com/westabdu" target="_blank" class="btn-heavy btn-heavy-outline">
+                <i class="fab fa-github"></i> GITHUB
+            </a>
+            <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn-heavy">
+                <i class="fab fa-discord"></i> DISCORD
+            </a>
         </div>
 
         <footer class="footer">
@@ -84,5 +112,33 @@
             <p>© 2026 ZEINTH STUDIOS · GELECEĞİ KODLUYORUZ</p>
         </footer>
     </div>
+
+    <script>
+        // Cursor ve grid highlight kodları
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorDot = document.querySelector('.custom-cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+            cursorDot.style.transform = `translate(${e.clientX - 2}px, ${e.clientY - 2}px)`;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            cursorDot.style.opacity = '0';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+            cursorDot.style.opacity = '1';
+        });
+
+        const gridHighlight = document.querySelector('.grid-highlight');
+        
+        document.addEventListener('mousemove', (e) => {
+            gridHighlight.style.left = e.clientX + 'px';
+            gridHighlight.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>

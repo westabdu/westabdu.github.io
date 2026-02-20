@@ -9,23 +9,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+    
+    <div class="cyber-grid"></div>
+    <div class="grid-highlight"></div>
+
+    <!-- Jarvis Floating Widget -->
+    <div class="jarvis-widget">
+        <div class="jarvis-ring">
+            <i class="fas fa-brain"></i>
+        </div>
+        <div class="jarvis-panel">
+            <h4>⚡ JARVIS STATUS</h4>
+            <p><span class="status">SYSTEM:</span> ONLINE</p>
+            <p><span class="status">LOCATION:</span> MERSIN</p>
+            <p><span class="status">MISSION:</span> 12 MARCH PREP</p>
+            <p><span class="status">UPTIME:</span> 7/24</p>
+        </div>
+    </div>
+
     <div class="container">
         <nav class="navbar">
-            <div class="logo">Zeinth Studios</div>
+            <div class="logo">ZEINTH<span>studios</span></div>
             <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="projects.html">Projeler</a>
-                <a href="dashboard.html" class="active">Dashboard</a>
-                <a href="updates.html">Güncellemeler</a>
-                <a href="about.html">Hakkımda</a>
+                <a href="index.html">ANA SAYFA</a>
+                <a href="projects.html">PROJELER</a>
+                <a href="dashboard.html" class="active">DASHBOARD</a>
+                <a href="updates.html">GÜNCELLEMELER</a>
+                <a href="about.html">HAKKIMDA</a>
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="nav-btn">
-                    <i class="fab fa-discord"></i> Discord
+                    <i class="fab fa-discord"></i> DISCORD
                 </a>
             </div>
         </nav>
 
         <section style="text-align: center; padding: 60px 0;">
-            <h1 class="section-title">Bot Dashboard</h1>
+            <h1 class="section-title">BOT DASHBOARD</h1>
             <p style="color: var(--text-secondary);">Gerçek zamanlı bot istatistikleri</p>
         </section>
 
@@ -49,7 +69,7 @@
         </div>
 
         <!-- KOMPOZİSYON ÇUBUKLARI -->
-        <div style="background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 30px; padding: 40px; margin: 40px 0;">
+        <div style="background: var(--bg-card); backdrop-filter: blur(10px); border-radius: 30px; padding: 40px; margin: 40px 0;">
             <h2 style="margin-bottom: 30px;">Komut Dağılımı</h2>
             <div class="progress-container">
                 <div class="progress-item">
@@ -101,13 +121,13 @@
         </div>
 
         <!-- KONTROL PANELİ -->
-        <div style="background: var(--gradient-1); border-radius: 40px; padding: 60px; text-align: center; margin: 40px 0;">
-            <i class="fas fa-code-branch" style="font-size: 64px; margin-bottom: 20px;"></i>
+        <div style="background: var(--bg-card); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 40px; padding: 60px; text-align: center; margin: 40px 0;">
+            <i class="fas fa-code-branch" style="font-size: 64px; margin-bottom: 20px; color: var(--neon-purple);"></i>
             <h2 style="font-size: 36px; margin-bottom: 15px;">Kontrol Paneli</h2>
-            <p style="max-width: 600px; margin: 0 auto 30px;">
+            <p style="max-width: 600px; margin: 0 auto 30px; color: var(--text-secondary);">
                 Web tabanlı kontrol paneli geliştiriliyor. Yakında sunucu ayarlarını web'den yönetebileceksiniz.
             </p>
-            <span style="background: rgba(255,255,255,0.2); padding: 10px 30px; border-radius: 50px;">
+            <span style="background: rgba(155,93,229,0.1); padding: 10px 30px; border-radius: 50px; color: var(--neon-purple);">
                 <i class="fas fa-hourglass-half"></i> Yakında
             </span>
         </div>
@@ -146,6 +166,32 @@
                 console.error('API hatası:', error);
             }
         }
+
+        // Cursor ve grid highlight kodları
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorDot = document.querySelector('.custom-cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+            cursorDot.style.transform = `translate(${e.clientX - 2}px, ${e.clientY - 2}px)`;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            cursorDot.style.opacity = '0';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+            cursorDot.style.opacity = '1';
+        });
+
+        const gridHighlight = document.querySelector('.grid-highlight');
+        
+        document.addEventListener('mousemove', (e) => {
+            gridHighlight.style.left = e.clientX + 'px';
+            gridHighlight.style.top = e.clientY + 'px';
+        });
 
         window.addEventListener('load', fetchBotStats);
         setInterval(fetchBotStats, 60000);

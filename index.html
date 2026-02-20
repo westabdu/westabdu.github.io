@@ -20,6 +20,20 @@
     <div class="cyber-grid" id="cyberGrid"></div>
     <div class="grid-highlight" id="gridHighlight"></div>
 
+    <!-- Jarvis Floating Widget -->
+    <div class="jarvis-widget">
+        <div class="jarvis-ring">
+            <i class="fas fa-brain"></i>
+        </div>
+        <div class="jarvis-panel">
+            <h4>⚡ JARVIS STATUS</h4>
+            <p><span class="status">SYSTEM:</span> ONLINE</p>
+            <p><span class="status">LOCATION:</span> MERSIN</p>
+            <p><span class="status">MISSION:</span> 12 MARCH PREP</p>
+            <p><span class="status">UPTIME:</span> 7/24</p>
+        </div>
+    </div>
+
     <div class="container">
         <!-- GLASS NAVBAR -->
         <nav class="navbar">
@@ -36,118 +50,120 @@
             </div>
         </nav>
 
-        <!-- HERO WITH TYPEWRITER -->
-        <section style="min-height: 80vh; display: flex; align-items: center;">
-            <div style="width: 100%;">
-                <span style="color: var(--neon-blue); font-size: 18px; letter-spacing: 3px; margin-bottom: 20px; display: block;">
-                    ✦ HOŞ GELDİN ✦
-                </span>
-                
-                <div class="typewriter-container">
-                    <div class="typewriter-text" id="typewriter"></div>
+        <!-- BENTO GRID ANA SAYFA -->
+        <div class="bento-grid">
+            <!-- Kutu 1: Jarvis S-S3 (Büyük) -->
+            <div class="bento-item bento-large">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <span style="color: var(--neon-purple); font-size: 14px; letter-spacing: 2px;">JARVIS S-S3</span>
+                    <span style="color: var(--text-secondary); font-size: 12px; background: rgba(155,93,229,0.1); padding: 5px 15px; border-radius: 30px;">ACTIVE</span>
                 </div>
-                
-                <p style="font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 40px 0; line-height: 1.8;">
-                    17 yaşında, Mersin'de başlayan bir yazılım hikayesi. 
-                    AI geliştirme, Discord botları ve oyun projeleriyle geleceği kodluyorum.
-                </p>
-                
-                <div style="display: flex; gap: 20px;">
-                    <a href="projects.html" class="btn">
-                        <i class="fas fa-rocket"></i> PROJELERİ KEŞFET
-                    </a>
-                    <a href="dashboard.html" class="btn btn-outline">
-                        <i class="fas fa-chart-line"></i> CANLI DASHBOARD
-                    </a>
+                <h2 style="font-size: 32px; margin-bottom: 20px;">Üçlü AI Modeli</h2>
+                <div class="wave-container">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+                <p style="color: var(--text-secondary); margin-top: 20px;">Kendi kendine öğrenen, gelişmiş yapay zeka çekirdeği</p>
+                <div style="display: flex; gap: 10px; margin-top: 30px;">
+                    <span style="background: rgba(155,93,229,0.1); padding: 5px 15px; border-radius: 30px; font-size: 12px;">🧠 Model 1: 98%</span>
+                    <span style="background: rgba(155,93,229,0.1); padding: 5px 15px; border-radius: 30px; font-size: 12px;">🤖 Model 2: 87%</span>
+                    <span style="background: rgba(155,93,229,0.1); padding: 5px 15px; border-radius: 30px; font-size: 12px;">⚡ Model 3: 76%</span>
                 </div>
             </div>
-        </section>
 
-        <!-- STATS CARDS -->
-        <div class="stat-grid">
-            <div class="stat-card">
-                <div class="stat-number">72+</div>
-                <div>DISCORD KOMUTU</div>
+            <!-- Kutu 2: Zeinth Discord Bot (Orta) -->
+            <div class="bento-item">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <i class="fab fa-discord" style="color: var(--neon-purple); font-size: 24px;"></i>
+                    <span style="color: var(--neon-purple);">LIVE</span>
+                </div>
+                <div class="big-number">72+</div>
+                <div style="color: var(--text-secondary); font-size: 14px;">DISCORD KOMUTU</div>
+                <div style="margin-top: 30px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Aktif Sunucu</span>
+                        <span>1</span>
+                    </div>
+                    <div class="progress-bar" style="height: 4px;">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">7/24</div>
-                <div>AKTİF BOT</div>
+
+            <!-- Kutu 3: Mevcut Durum (Küçük) -->
+            <div class="bento-item">
+                <i class="fas fa-map-pin" style="color: var(--neon-purple); font-size: 24px; margin-bottom: 20px;"></i>
+                <h3 style="font-size: 20px; margin-bottom: 10px;">MEVCUT DURUM</h3>
+                <p style="color: var(--neon-purple); font-size: 18px; margin-bottom: 20px;">Mersin Karargahında</p>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-code" style="color: var(--text-secondary);"></i>
+                    <span>Kod Yazıyor... ☕</span>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div style="display: flex; gap: 5px;">
+                        <span style="width: 8px; height: 8px; background: var(--neon-purple); border-radius: 50%; animation: pulseRing 1s infinite;"></span>
+                        <span style="width: 8px; height: 8px; background: var(--neon-purple); border-radius: 50%; opacity: 0.5;"></span>
+                        <span style="width: 8px; height: 8px; background: var(--neon-purple); border-radius: 50%; opacity: 0.2;"></span>
+                    </div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">3</div>
-                <div>AI MODEL</div>
+
+            <!-- Kutu 4: Teknoloji İkonları (Dikey) -->
+            <div class="bento-item bento-tall">
+                <h3 style="margin-bottom: 30px;">TEKNOLOJİ STACK</h3>
+                <div class="tech-ticker">
+                    <div class="tech-ticker-content">
+                        <div class="tech-ticker-item"><i class="fab fa-js"></i> JavaScript/ES6</div>
+                        <div class="tech-ticker-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="tech-ticker-item"><i class="fas fa-code"></i> C# / .NET</div>
+                        <div class="tech-ticker-item"><i class="fab fa-node"></i> Node.js</div>
+                        <div class="tech-ticker-item"><i class="fas fa-database"></i> MongoDB</div>
+                        <div class="tech-ticker-item"><i class="fab fa-react"></i> React</div>
+                        <div class="tech-ticker-item"><i class="fas fa-brain"></i> AI/ML</div>
+                        <!-- Tekrar (sonsuz döngü için) -->
+                        <div class="tech-ticker-item"><i class="fab fa-js"></i> JavaScript/ES6</div>
+                        <div class="tech-ticker-item"><i class="fab fa-python"></i> Python</div>
+                        <div class="tech-ticker-item"><i class="fas fa-code"></i> C# / .NET</div>
+                        <div class="tech-ticker-item"><i class="fab fa-node"></i> Node.js</div>
+                        <div class="tech-ticker-item"><i class="fas fa-database"></i> MongoDB</div>
+                        <div class="tech-ticker-item"><i class="fab fa-react"></i> React</div>
+                        <div class="tech-ticker-item"><i class="fas fa-brain"></i> AI/ML</div>
+                    </div>
+                </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-number">4</div>
-                <div>AKTİF PROJE</div>
+
+            <!-- Kutu 5: İstatistikler (Geniş) -->
+            <div class="bento-item bento-wide">
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                    <div>
+                        <div style="font-size: 40px; font-weight: 700; color: var(--neon-purple);">17</div>
+                        <div style="color: var(--text-secondary);">YAŞ</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 40px; font-weight: 700; color: var(--neon-purple);">7/24</div>
+                        <div style="color: var(--text-secondary);">AKTİF</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 40px; font-weight: 700; color: var(--neon-purple);">4</div>
+                        <div style="color: var(--text-secondary);">AKTİF PROJE</div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- FEATURED PROJECTS -->
-        <section style="padding: 80px 0;">
-            <h2 class="section-title">ÖNE ÇIKAN PROJELER</h2>
-            <div class="card-grid">
-                <div class="card glow-border">
-                    <i class="fas fa-robot" style="font-size: 48px; color: var(--neon-blue); margin-bottom: 20px;"></i>
-                    <h3>ZEINTH MODERATION</h3>
-                    <p style="color: var(--text-secondary);">70+ komut, gelişmiş moderasyon, ekonomi ve seviye sistemi. Tamamen özelleştirilebilir.</p>
-                    <div class="progress-container" style="margin-top: 30px;">
-                        <div class="progress-item">
-                            <div class="progress-header">
-                                <span>Tamamlanma</span>
-                                <span>100%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 100%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card glow-border">
-                    <i class="fas fa-brain" style="font-size: 48px; color: var(--neon-blue); margin-bottom: 20px;"></i>
-                    <h3>JARVIS AI</h3>
-                    <p style="color: var(--text-secondary);">Üçlü AI modeli ile çalışan, kendi kendine öğrenen gelişmiş yapay zeka asistanı.</p>
-                    <div class="progress-container" style="margin-top: 30px;">
-                        <div class="progress-item">
-                            <div class="progress-header">
-                                <span>Geliştirme</span>
-                                <span>65%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 65%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card glow-border">
-                    <i class="fas fa-gamepad" style="font-size: 48px; color: var(--neon-blue); margin-bottom: 20px;"></i>
-                    <h3>CHAOS MARKET</h3>
-                    <p style="color: var(--text-secondary);">Çok oyunculu, kaotik market simülasyonu. Strateji ve ticaret bir arada.</p>
-                    <div class="progress-container" style="margin-top: 30px;">
-                        <div class="progress-item">
-                            <div class="progress-header">
-                                <span>Geliştirme</span>
-                                <span>40%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 40%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GLASS CTA -->
-        <div style="background: var(--bg-card); backdrop-filter: blur(30px); border: 1px solid var(--glass-border); border-radius: 50px; padding: 80px; text-align: center; margin: 60px 0;">
-            <h2 style="font-size: 48px; margin-bottom: 20px; font-family: var(--font-heading);">TOPLULUĞA KATIL</h2>
-            <p style="font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 30px;">
-                Gelişmeleri takip et, beta testlerine katıl, fikirlerini paylaş.
-            </p>
-            <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn" style="background: var(--neon-blue); color: var(--bg-deep);">
-                <i class="fab fa-discord"></i> KATIL
+        <!-- Heavy-Duty Buttons -->
+        <div style="display: flex; gap: 20px; justify-content: center; margin: 60px 0;">
+            <a href="projects.html" class="btn-heavy">
+                <i class="fas fa-rocket"></i> PROJELERİ KEŞFET
+            </a>
+            <a href="dashboard.html" class="btn-heavy btn-heavy-outline">
+                <i class="fas fa-chart-line"></i> CANLI DASHBOARD
             </a>
         </div>
 
@@ -191,43 +207,6 @@
             gridHighlight.style.top = e.clientY + 'px';
         });
 
-        // TYPEWRITER EFFECT
-        const typewriterElement = document.getElementById('typewriter');
-        const texts = [
-            'HAYAL ET,',
-            'KODLA,',
-            'YAYINLA.'
-        ];
-        
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        
-        function typeWriter() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                typewriterElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typewriterElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            
-            if (!isDeleting && charIndex === currentText.length) {
-                isDeleting = true;
-                setTimeout(typeWriter, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                setTimeout(typeWriter, 500);
-            } else {
-                setTimeout(typeWriter, isDeleting ? 50 : 100);
-            }
-        }
-        
-        typeWriter();
-
         // PROGRESS BAR ANIMATION
         const observerOptions = {
             threshold: 0.5
@@ -248,8 +227,8 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.card').forEach(card => {
-            observer.observe(card);
+        document.querySelectorAll('.bento-item, .card').forEach(item => {
+            observer.observe(item);
         });
     </script>
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeinth | AI & Yazılım Geliştirici</title>
+    <title>Zeinth | Hakkımda</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,6 +14,20 @@
     
     <div class="cyber-grid"></div>
     <div class="grid-highlight" id="gridHighlight"></div>
+
+    <!-- Jarvis Floating Widget -->
+    <div class="jarvis-widget">
+        <div class="jarvis-ring">
+            <i class="fas fa-brain"></i>
+        </div>
+        <div class="jarvis-panel">
+            <h4>⚡ JARVIS STATUS</h4>
+            <p><span class="status">SYSTEM:</span> ONLINE</p>
+            <p><span class="status">LOCATION:</span> MERSIN</p>
+            <p><span class="status">MISSION:</span> 12 MARCH PREP</p>
+            <p><span class="status">UPTIME:</span> 7/24</p>
+        </div>
+    </div>
 
     <div class="container">
         <nav class="navbar">
@@ -30,42 +44,75 @@
             </div>
         </nav>
 
-        <!-- ABOUT HERO -->
-        <section style="display: grid; grid-template-columns: 350px 1fr; gap: 60px; margin: 80px 0;">
-            <div style="position: relative;">
-                <div style="width: 100%; aspect-ratio: 1; border-radius: 30px; background: var(--bg-card); backdrop-filter: blur(20px); border: 1px solid var(--glass-border); display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-user-astronaut" style="font-size: 150px; color: var(--neon-blue);"></i>
+        <!-- DOSSIER STYLE HAKKIMDA -->
+        <div class="dossier-container">
+            <div class="dossier-header">
+                <span class="dossier-title">DOSSIER #ZEINTH</span>
+                <span class="dossier-classification">CONFIDENTIAL</span>
+            </div>
+            
+            <div class="dossier-grid">
+                <div>
+                    <div class="dossier-field">
+                        <div class="dossier-label">TAM AD</div>
+                        <div class="dossier-value">ABDURAHMAN</div>
+                    </div>
+                    
+                    <div class="dossier-field">
+                        <div class="dossier-label">KONUM</div>
+                        <div class="dossier-value">MERSİN, TR</div>
+                    </div>
+                    
+                    <div class="dossier-field">
+                        <div class="dossier-label">YAŞ / SINIF</div>
+                        <div class="dossier-value">17 · 11.SINIF</div>
+                    </div>
+                    
+                    <div class="dossier-field">
+                        <div class="dossier-label">STATÜ</div>
+                        <div class="dossier-value">KURUCU & GELİŞTİRİCİ</div>
+                    </div>
                 </div>
-                <div style="margin-top: 20px; text-align: center;">
-                    <h2 style="font-size: 32px;">ABDURAHMAN</h2>
-                    <p style="color: var(--neon-blue);">17 · 11.SINIF · MERSİN</p>
+                
+                <div>
+                    <div class="dossier-field">
+                        <div class="dossier-label">YETKİNLİKLER</div>
+                        <div style="margin-top: 10px;">
+                            <span class="dossier-tag">JavaScript/ES6</span>
+                            <span class="dossier-tag">Python</span>
+                            <span class="dossier-tag">Node.js</span>
+                            <span class="dossier-tag">MongoDB</span>
+                            <span class="dossier-tag">React</span>
+                            <span class="dossier-tag">C#</span>
+                            <span class="dossier-tag">AI/ML</span>
+                        </div>
+                    </div>
+                    
+                    <div class="dossier-field">
+                        <div class="dossier-label">AKTİF PROJELER</div>
+                        <div style="margin-top: 10px;">
+                            <span class="dossier-tag">Zeinth Moderation</span>
+                            <span class="dossier-tag">Jarvis AI</span>
+                            <span class="dossier-tag">Chaos Market</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-            <div>
-                <span style="color: var(--neon-blue); font-size: 14px; letter-spacing: 2px;">✦ KURUCU & GELİŞTİRİCİ ✦</span>
-                <p style="font-size: 18px; color: var(--text-secondary); margin: 30px 0; line-height: 1.8;">
-                    Yazılım serüvenime "kendi çapımda" başlasam da, bugün 7/24 çalışan Discord botları, 
+            <div style="margin-top: 40px; padding: 30px; background: rgba(155,93,229,0.05); border-radius: 20px; border: 1px solid var(--glass-border);">
+                <p style="color: var(--text-secondary); line-height: 1.8; font-size: 16px;">
+                    "Yazılım serüvenime 'kendi çapımda' başlasam da, bugün 7/24 çalışan Discord botları, 
                     yapay zeka projeleri ve web uygulamaları geliştiren bir noktadayım. Zenith Studios 
-                    çatısı altında Jarvis AI, Chaos Market gibi özgün projeler üretiyorum.
+                    çatısı altında Jarvis AI, Chaos Market gibi özgün projeler üretiyorum."
                 </p>
-                <div style="display: flex; gap: 20px;">
-                    <a href="https://github.com/westabdu" target="_blank" class="btn btn-outline">
-                        <i class="fab fa-github"></i> GITHUB
-                    </a>
-                    <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn">
-                        <i class="fab fa-discord"></i> DISCORD
-                    </a>
-                </div>
             </div>
-        </section>
+        </div>
 
         <!-- TECH STACK WITH POWER BARS -->
         <section style="padding: 60px 0;">
             <h2 class="section-title">TEKNOLOJİ YETKİNLİKLERİ</h2>
             
             <div class="tech-stack">
-                <!-- JavaScript -->
                 <div class="tech-item">
                     <div class="tech-icon"><i class="fab fa-js"></i></div>
                     <div class="tech-name">JavaScript/ES6</div>
@@ -75,7 +122,6 @@
                     </div>
                 </div>
                 
-                <!-- Python -->
                 <div class="tech-item">
                     <div class="tech-icon"><i class="fab fa-python"></i></div>
                     <div class="tech-name">Python</div>
@@ -85,7 +131,6 @@
                     </div>
                 </div>
                 
-                <!-- C# -->
                 <div class="tech-item">
                     <div class="tech-icon"><i class="fas fa-code"></i></div>
                     <div class="tech-name">C# / .NET</div>
@@ -95,7 +140,6 @@
                     </div>
                 </div>
                 
-                <!-- Node.js -->
                 <div class="tech-item">
                     <div class="tech-icon"><i class="fab fa-node"></i></div>
                     <div class="tech-name">Node.js</div>
@@ -105,7 +149,6 @@
                     </div>
                 </div>
                 
-                <!-- MongoDB -->
                 <div class="tech-item">
                     <div class="tech-icon"><i class="fas fa-database"></i></div>
                     <div class="tech-name">MongoDB</div>
@@ -115,7 +158,6 @@
                     </div>
                 </div>
                 
-                <!-- React -->
                 <div class="tech-item">
                     <div class="tech-icon"><i class="fab fa-react"></i></div>
                     <div class="tech-name">React</div>
@@ -125,7 +167,6 @@
                     </div>
                 </div>
                 
-                <!-- Flet / Flutter -->
                 <div class="tech-item">
                     <div class="tech-icon"><i class="fas fa-mobile-alt"></i></div>
                     <div class="tech-name">Flet / Flutter</div>
@@ -135,7 +176,6 @@
                     </div>
                 </div>
                 
-                <!-- AI/ML -->
                 <div class="tech-item">
                     <div class="tech-icon"><i class="fas fa-brain"></i></div>
                     <div class="tech-name">AI / Makine Öğrenmesi</div>
@@ -146,6 +186,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- Heavy-Duty Buttons -->
+        <div style="display: flex; gap: 20px; justify-content: center; margin: 60px 0;">
+            <a href="https://github.com/westabdu" target="_blank" class="btn-heavy btn-heavy-outline">
+                <i class="fab fa-github"></i> GITHUB
+            </a>
+            <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn-heavy">
+                <i class="fab fa-discord"></i> DISCORD
+            </a>
+        </div>
 
         <footer class="footer">
             <div class="footer-socials">
@@ -158,8 +208,52 @@
     </div>
 
     <script>
-        // Cursor, grid highlight ve observer kodları...
-        // (Aynı script'leri buraya ekle)
+        // Cursor, grid highlight ve observer kodları
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorDot = document.querySelector('.custom-cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+            cursorDot.style.transform = `translate(${e.clientX - 2}px, ${e.clientY - 2}px)`;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            cursorDot.style.opacity = '0';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+            cursorDot.style.opacity = '1';
+        });
+
+        const gridHighlight = document.getElementById('gridHighlight');
+        
+        document.addEventListener('mousemove', (e) => {
+            gridHighlight.style.left = e.clientX + 'px';
+            gridHighlight.style.top = e.clientY + 'px';
+        });
+
+        // Progress bar animasyonu
+        const observerOptions = { threshold: 0.5 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.tech-bar');
+                    bars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.tech-item').forEach(item => {
+            observer.observe(item);
+        });
     </script>
 </body>
 </html>
