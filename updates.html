@@ -50,7 +50,7 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <div class="logo"><i class="fas fa-crown"></i> Zeinth</div>
             <div class="nav-links">
                 <a href="index.html">Ana Sayfa</a>
@@ -117,5 +117,12 @@
             <p>© 2026 Zeinth Studios · Son güncelleme: 14.02.2026</p>
         </footer>
     </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
+        });
+    </script>
 </body>
 </html>
