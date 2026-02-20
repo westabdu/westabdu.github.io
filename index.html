@@ -9,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="particles"></div>
+
     <div class="container">
-        <!-- NAVBAR -->
         <nav class="navbar">
             <div class="logo">Zeinth Studios</div>
             <div class="nav-links">
@@ -25,21 +26,23 @@
             </div>
         </nav>
 
-        <!-- HERO BÖLÜMÜ -->
+        <!-- HERO -->
         <section style="min-height: 80vh; display: flex; align-items: center;">
-            <div style="width: 100%;">
-                <span class="section-title" style="display: inline-block; margin-bottom: 20px;">Hoş Geldiniz</span>
-                <h1 style="font-size: 72px; font-weight: 800; margin-bottom: 20px; line-height: 1.1;">
-                    <span style="background: linear-gradient(135deg, #fff, #e0e0ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hayal et,</span><br>
-                    <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">kodla, yayınla.</span>
+            <div>
+                <span style="color: var(--neon-cyan); font-size: 20px; display: block; margin-bottom: 20px; animation: glowPulse 2s infinite;">
+                    ✦ HOŞ GELDİN ✦
+                </span>
+                <h1 style="font-size: 80px; font-weight: 800; line-height: 1.1; margin-bottom: 30px;">
+                    <span style="background: linear-gradient(135deg, #fff, var(--neon-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hayal et,</span><br>
+                    <span style="background: var(--gradient-cosmic); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">kodla, yayınla.</span>
                 </h1>
                 <p style="font-size: 20px; color: var(--text-secondary); max-width: 600px; margin-bottom: 40px;">
-                    Discord bot geliştirme, oyun yapımı ve dijital çözümler. 
-                    17 yaşında, Mersin'de başlayan bir yazılım hikayesi.
+                    Discord bot geliştirme, yapay zeka, oyun yapımı ve dijital çözümler. 
+                    17 yaşında başlayan bir yazılım hikayesi.
                 </p>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div style="display: flex; gap: 20px;">
                     <a href="projects.html" class="btn">
-                        <i class="fas fa-rocket"></i> Projeleri İncele
+                        <i class="fas fa-rocket"></i> Projeleri Keşfet
                     </a>
                     <a href="dashboard.html" class="btn btn-outline">
                         <i class="fas fa-chart-line"></i> Canlı Dashboard
@@ -50,19 +53,19 @@
                 <div class="stat-grid" style="margin-top: 60px;">
                     <div class="stat-card">
                         <div class="stat-number">72+</div>
-                        <div>Discord Komutu</div>
+                        <div>Komut</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">7/24</div>
-                        <div>Aktif Bot</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">33</div>
-                        <div>Ekonomi Komutu</div>
+                        <div>Aktif</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">3</div>
-                        <div>Aktif Proje</div>
+                        <div>AI Model</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div>Proje</div>
                     </div>
                 </div>
             </div>
@@ -70,46 +73,64 @@
 
         <!-- ÖZELLİKLER -->
         <section style="padding: 100px 0;">
-            <h2 class="section-title">Öne Çıkan Özellikler</h2>
+            <h2 class="section-title">Neler Yapıyoruz?</h2>
             <div class="card-grid">
                 <div class="card">
-                    <i class="fas fa-robot" style="font-size: 48px; color: var(--accent-blue); margin-bottom: 20px;"></i>
-                    <h3>Gelişmiş Bot</h3>
-                    <p>70'in üzerinde komut, tamamen özelleştirilebilir moderasyon, ekonomi ve eğlence sistemleri.</p>
+                    <i class="fas fa-robot" style="font-size: 48px; color: var(--neon-cyan); margin-bottom: 20px;"></i>
+                    <h3>Discord Botları</h3>
+                    <p>Gelişmiş moderasyon, ekonomi ve eğlence botları. 70'in üzerinde komut, tamamen özelleştirilebilir.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-chart-line" style="font-size: 48px; color: var(--accent-purple); margin-bottom: 20px;"></i>
-                    <h3>Gerçek Zamanlı Dashboard</h3>
-                    <p>Anlık bot istatistikleri, sunucu analizleri ve canlı veri takibi.</p>
+                    <i class="fas fa-brain" style="font-size: 48px; color: var(--neon-pink); margin-bottom: 20px;"></i>
+                    <h3>Yapay Zeka</h3>
+                    <p>Jarvis AI - Kendi kendine öğrenen, üçlü model ile çalışan gelişmiş yapay zeka asistanı.</p>
                 </div>
                 <div class="card">
-                    <i class="fas fa-gamepad" style="font-size: 48px; color: #e67e22; margin-bottom: 20px;"></i>
-                    <h3>Chaos Market</h3>
-                    <p>Geliştirilmekte olan, sıradışı market simülasyonu oyunu.</p>
+                    <i class="fas fa-gamepad" style="font-size: 48px; color: var(--neon-purple); margin-bottom: 20px;"></i>
+                    <h3>Oyun Geliştirme</h3>
+                    <p>Chaos Market - Sıradışı, kaotik, çok oyunculu market simülasyonu.</p>
                 </div>
             </div>
         </section>
 
-        <!-- CTA -->
-        <div style="background: var(--gradient-1); border-radius: 40px; padding: 80px; text-align: center; margin: 60px 0;">
-            <h2 style="font-size: 48px; margin-bottom: 20px;">Topluluğa Katıl</h2>
-            <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px;">
-                Gelişmeleri takip et, beta testlerine katıl, fikirlerini paylaş.
+        <!-- JARVIS TANITIM -->
+        <section class="jarvis-section">
+            <h2 style="font-size: 48px; text-align: center; margin-bottom: 30px;">
+                <span class="glow-text" style="color: var(--neon-cyan);">JARVIS</span>
+                <span style="background: var(--gradient-cosmic); -webkit-background-clip: text;">AI</span>
+            </h2>
+            <p style="text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 40px;">
+                Üç farklı yapay zeka modelini aynı anda kullanan, kendi kendine öğrenen, sürekli gelişen bir beyin algoritması.
             </p>
-            <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn" style="background: white; color: var(--accent-blue);">
-                <i class="fab fa-discord"></i> Katıl
+            <a href="projects.html#jarvis" class="btn" style="display: inline-block; margin: 0 auto;">
+                <i class="fas fa-microchip"></i> Keşfet
             </a>
-        </div>
+        </section>
 
-        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-socials">
                 <a href="https://github.com/westabdu" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank"><i class="fab fa-discord"></i></a>
                 <a href="mailto:iletisim@zenith.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>© 2026 Zeinth Studios. Tüm hakları saklıdır. | Kod: Abdurahman</p>
+            <p>© 2026 Zeinth Studios · Geleceği Kodluyoruz</p>
         </footer>
     </div>
+
+    <script>
+        function createParticles() {
+            const container = document.querySelector('.particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                particle.style.background = `rgba(${Math.random()*255},${Math.random()*255},${Math.random()*255},0.3)`;
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+    </script>
 </body>
 </html>

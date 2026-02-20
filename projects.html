@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="particles"></div>
+    
     <div class="container">
         <!-- NAVBAR -->
         <nav class="navbar">
@@ -25,104 +27,90 @@
             </div>
         </nav>
 
-        <!-- BAŞLIK -->
-        <section style="text-align: center; padding: 60px 0;">
-            <h1 class="section-title">Aktif Projeler</h1>
-            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
-                Üzerinde çalıştığım tüm projeler, canlı takip ve geliştirme süreçleri.
+        <!-- JARVIS ÖZEL BÖLÜMÜ -->
+        <section class="jarvis-section">
+            <h2 style="font-size: 48px; margin-bottom: 30px; text-align: center;">
+                <span class="glow-text" style="color: var(--neon-cyan);">🤖 JARVIS</span> 
+                <span style="background: var(--gradient-cosmic); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">AI</span>
+            </h2>
+            <p style="text-align: center; color: var(--text-secondary); font-size: 18px; max-width: 800px; margin: 0 auto;">
+                Sadece bir Discord botu değil, kendi kendine öğrenen, üç farklı yapay zeka modelini eş zamanlı kullanan, 
+                gelişmiş bir beyin algoritması. Jarvis, sürekli öğrenir, analiz eder ve gelişir.
             </p>
+
+            <div class="ai-grid">
+                <div class="ai-model">
+                    <i class="fas fa-brain"></i>
+                    <h3 style="color: var(--neon-cyan);">Derin Öğrenme</h3>
+                    <p>Çok katmanlı sinir ağları ile sürekli öğrenen ve kendini güncelleyen yapay zeka çekirdeği.</p>
+                    <div class="ai-wave"></div>
+                </div>
+                <div class="ai-model">
+                    <i class="fas fa-robot"></i>
+                    <h3 style="color: var(--neon-pink);">NLP Motoru</h3>
+                    <p>Doğal dil işleme ile insan benzeri konuşma, anlama ve yanıt verme yeteneği.</p>
+                    <div class="ai-wave"></div>
+                </div>
+                <div class="ai-model">
+                    <i class="fas fa-network-wired"></i>
+                    <h3 style="color: var(--neon-purple);">Çoklu Model Sistemi</h3>
+                    <p>Üç farklı AI modeli eş zamanlı çalışır, birbirini besler ve optimize eder.</p>
+                    <div class="ai-wave"></div>
+                </div>
+            </div>
         </section>
 
         <!-- PROJE KARTLARI -->
-        <div class="card-grid">
-            <!-- ZEINTH MODERATION -->
-            <div class="card">
-                <span class="card-badge badge-green" style="background: rgba(46,204,113,0.15); color: #2ecc71;">🟢 Aktif</span>
-                <h3><i class="fas fa-robot"></i> Zeinth Moderation</h3>
-                <p style="font-size: 14px; color: var(--text-secondary);">v2.0 · 72+ komut</p>
-                <p>Discord sunucunuz için devasa ekonomi, moderasyon, kayıt sistemi, eğlence ve seviye modülleri. Tek çatı altında profesyonel yönetim.</p>
-                <div style="margin: 20px 0;">
-                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
-                        <i class="fas fa-coins"></i> 33 Ekonomi
-                    </span>
-                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
-                        <i class="fas fa-shield"></i> 16 Moderasyon
-                    </span>
-                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
-                        <i class="fas fa-level-up"></i> Level Sistemi
-                    </span>
-                </div>
-                <a href="dashboard.html" class="btn" style="width: 100%;">
-                    <i class="fas fa-chart-pie"></i> Canlı Dashboard
-                </a>
-            </div>
-
-            <!-- CHAOS MARKET -->
-            <div class="card">
-                <span class="card-badge badge-purple" style="background: rgba(155,89,182,0.15); color: #9b59b6;">🔵 Geliştiriliyor</span>
-                <h3><i class="fas fa-shopping-cart"></i> Chaos Market</h3>
-                <p style="font-size: 14px; color: var(--text-secondary);">Playtest: 2026 Q2</p>
-                <p>"Düzenin bittiği, ticaretin başladığı yer." Strateji, ticaret ve kaos simülasyonu. Zenith Studios imzalı ilk özgün oyun.</p>
-                <div style="margin: 20px 0;">
-                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
-                        <i class="fas fa-dice"></i> Strateji
-                    </span>
-                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
-                        <i class="fas fa-users"></i> Çok Oyunculu
-                    </span>
-                </div>
-                <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn btn-outline" style="width: 100%;">
-                    <i class="fab fa-discord"></i> Beta'ya Katıl
-                </a>
-            </div>
-
-            <!-- JARVIS (YENİ!) -->
-            <div class="card">
-                <span class="card-badge badge-orange" style="background: rgba(230,126,34,0.15); color: #e67e22;">⚡ Geliştiriliyor</span>
-                <h3><i class="fas fa-brain"></i> Jarvis AI</h3>
-                <p style="font-size: 14px; color: var(--text-secondary);">Yapay Zeka Asistanı</p>
-                <p>Gelişmiş yapay zeka ile Discord sunucunuzda akıllı sohbet, otomatik moderasyon ve daha fazlası. Doğal dil işleme ve makine öğrenimi ile güçlendirilmiş.</p>
-                <div style="margin: 20px 0;">
-                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
-                        <i class="fas fa-microchip"></i> AI
-                    </span>
-                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
-                        <i class="fas fa-comment"></i> Doğal Sohbet
-                    </span>
-                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
-                        <i class="fas fa-robot"></i> Otomatik Mod
-                    </span>
-                </div>
-                <a href="#" class="btn btn-outline" style="width: 100%;">
-                    <i class="fas fa-hourglass-half"></i> Yakında
-                </a>
-            </div>
-        </div>
-
-        <!-- YOL HARİTASI -->
-        <section style="padding: 80px 0;">
-            <h2 class="section-title">Proje Yol Haritası</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <h4>İlk Adım</h4>
-                        <p>Zeinth Moderation'ın temelleri atıldı. İlk komutlar yazıldı.</p>
+        <section style="padding: 40px 0;">
+            <h2 class="section-title">Aktif Projeler</h2>
+            <div class="card-grid">
+                <!-- ZEINTH MODERATION -->
+                <div class="card">
+                    <span class="card-badge" style="background: rgba(0,255,249,0.1); color: var(--neon-cyan); border: 1px solid var(--neon-cyan);">🟢 7/24 Aktif</span>
+                    <h3><i class="fas fa-robot"></i> Zeinth Moderation</h3>
+                    <p>Discord'un en kapsamlı moderasyon ve ekonomi botu. 70+ komut, gelişmiş log sistemi, otomatik moderasyon.</p>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
+                        <span style="background: rgba(0,255,249,0.05); padding: 8px 15px; border-radius: 30px; border: 1px solid var(--neon-cyan);">
+                            <i class="fas fa-coins" style="color: var(--neon-cyan);"></i> 33 Ekonomi
+                        </span>
+                        <span style="background: rgba(255,43,158,0.05); padding: 8px 15px; border-radius: 30px; border: 1px solid var(--neon-pink);">
+                            <i class="fas fa-shield" style="color: var(--neon-pink);"></i> 16 Mod
+                        </span>
                     </div>
+                    <a href="dashboard.html" class="btn" style="width: 100%;">
+                        <i class="fas fa-chart-pie"></i> Canlı İzle
+                    </a>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <h4>Ekonomi Devrimi</h4>
-                        <p>33 ekonomi komutu, hisse senedi, evcil hayvan, iş sistemi eklendi.</p>
-                    </div>
+
+                <!-- CHAOS MARKET -->
+                <div class="card">
+                    <span class="card-badge" style="background: rgba(181,55,242,0.1); color: var(--neon-purple); border: 1px solid var(--neon-purple);">🔵 Geliştiriliyor</span>
+                    <h3><i class="fas fa-shopping-cart"></i> Chaos Market</h3>
+                    <p>"Düzenin bittiği, ticaretin başladığı yer." Çok oyunculu, kaotik market simülasyonu.</p>
+                    <a href="#" class="btn btn-outline" style="width: 100%;">
+                        <i class="fab fa-discord"></i> Beta Katılım
+                    </a>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2026</div>
-                    <div class="timeline-content">
-                        <h4>Zenith Studios</h4>
-                        <p>72+ komut, web sitesi, dashboard, Chaos Market ve Jarvis AI geliştiriliyor.</p>
+
+                <!-- JARVIS AI -->
+                <div class="card">
+                    <span class="card-badge" style="background: rgba(0,255,157,0.1); color: var(--neon-green); border: 1px solid var(--neon-green);">⚡ Geliştiriliyor</span>
+                    <h3><i class="fas fa-brain" style="color: var(--neon-green);"></i> Jarvis AI</h3>
+                    <p>Üçlü AI modeli ile çalışan, kendi kendine öğrenen, gelişmiş yapay zeka asistanı.</p>
+                    <div style="margin: 20px 0;">
+                        <div style="display: inline-block; background: rgba(0,255,249,0.1); padding: 8px 15px; border-radius: 30px; margin: 5px;">
+                            <span style="color: var(--neon-cyan);">🧠 Model 1</span>
+                        </div>
+                        <div style="display: inline-block; background: rgba(255,43,158,0.1); padding: 8px 15px; border-radius: 30px; margin: 5px;">
+                            <span style="color: var(--neon-pink);">🤖 Model 2</span>
+                        </div>
+                        <div style="display: inline-block; background: rgba(181,55,242,0.1); padding: 8px 15px; border-radius: 30px; margin: 5px;">
+                            <span style="color: var(--neon-purple);">⚡ Model 3</span>
+                        </div>
                     </div>
+                    <a href="#" class="btn btn-outline" style="width: 100%; border-color: var(--neon-green); color: var(--neon-green);">
+                        <i class="fas fa-hourglass-half"></i> Öğreniyor...
+                    </a>
                 </div>
             </div>
         </section>
@@ -134,8 +122,25 @@
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank"><i class="fab fa-discord"></i></a>
                 <a href="mailto:iletisim@zenith.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>© 2026 Zeinth Studios. Projeler sürekli güncellenir.</p>
+            <p>© 2026 Zeinth Studios · Geleceği Kodluyoruz</p>
         </footer>
     </div>
+
+    <script>
+        // Particle efekti
+        function createParticles() {
+            const container = document.querySelector('.particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+                particle.style.background = `rgba(${Math.random()*255},${Math.random()*255},${Math.random()*255},0.3)`;
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+    </script>
 </body>
 </html>
