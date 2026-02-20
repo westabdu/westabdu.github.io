@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeinth Studios | Projeler</title>
-    <meta name="description" content="Zeinth Studios projeleri: Zeinth Moderation bot, Chaos Market, Jarvis ve daha fazlası.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <nav class="navbar" id="navbar">
-            <div class="logo"><i class="fas fa-crown"></i> Zeinth</div>
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">Zeinth Studios</div>
             <div class="nav-links">
                 <a href="index.html">Ana Sayfa</a>
                 <a href="projects.html" class="active">Projeler</a>
@@ -25,64 +25,109 @@
             </div>
         </nav>
 
-        <section style="padding: 60px 0 20px;">
-            <h1 class="section-title">🛠️ Aktif Projeler</h1>
+        <!-- BAŞLIK -->
+        <section style="text-align: center; padding: 60px 0;">
+            <h1 class="section-title">Aktif Projeler</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Üzerinde çalıştığım tüm projeler, canlı takip ve geliştirme süreçleri.
+            </p>
         </section>
 
         <!-- PROJE KARTLARI -->
         <div class="card-grid">
-            <!-- Zeinth Moderation -->
+            <!-- ZEINTH MODERATION -->
             <div class="card">
-                <span class="card-badge badge-green">🟢 7/24 Aktif</span>
+                <span class="card-badge badge-green" style="background: rgba(46,204,113,0.15); color: #2ecc71;">🟢 Aktif</span>
                 <h3><i class="fas fa-robot"></i> Zeinth Moderation</h3>
-                <p style="font-size: 14px; color: #a0a0a0; margin-bottom: 8px;">v2.0 · 72+ komut</p>
+                <p style="font-size: 14px; color: var(--text-secondary);">v2.0 · 72+ komut</p>
                 <p>Discord sunucunuz için devasa ekonomi, moderasyon, kayıt sistemi, eğlence ve seviye modülleri. Tek çatı altında profesyonel yönetim.</p>
-                <div style="display: flex; gap: 10px; margin-top: 25px;">
-                    <span style="background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 50px; font-size: 12px;"><i class="fas fa-coins"></i> 33 Ekonomi</span>
-                    <span style="background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 50px; font-size: 12px;"><i class="fas fa-shield"></i> 16 Mod</span>
-                    <span style="background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 50px; font-size: 12px;"><i class="fas fa-level-up"></i> Level</span>
+                <div style="margin: 20px 0;">
+                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
+                        <i class="fas fa-coins"></i> 33 Ekonomi
+                    </span>
+                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
+                        <i class="fas fa-shield"></i> 16 Moderasyon
+                    </span>
+                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
+                        <i class="fas fa-level-up"></i> Level Sistemi
+                    </span>
                 </div>
-                <a href="dashboard.html" class="btn btn-small" style="margin-top: 25px; width: 100%;">
-                    <i class="fas fa-chart-pie"></i> Dashboard
+                <a href="dashboard.html" class="btn" style="width: 100%;">
+                    <i class="fas fa-chart-pie"></i> Canlı Dashboard
                 </a>
             </div>
-            <!-- Chaos Market -->
+
+            <!-- CHAOS MARKET -->
             <div class="card">
-                <span class="card-badge badge-purple">🟣 Geliştiriliyor</span>
+                <span class="card-badge badge-purple" style="background: rgba(155,89,182,0.15); color: #9b59b6;">🔵 Geliştiriliyor</span>
                 <h3><i class="fas fa-shopping-cart"></i> Chaos Market</h3>
-                <p style="font-size: 14px; color: #a0a0a0; margin-bottom: 8px;">Playtest: 2026 Q2</p>
+                <p style="font-size: 14px; color: var(--text-secondary);">Playtest: 2026 Q2</p>
                 <p>"Düzenin bittiği, ticaretin başladığı yer." Strateji, ticaret ve kaos simülasyonu. Zenith Studios imzalı ilk özgün oyun.</p>
-                <div style="display: flex; gap: 10px; margin-top: 25px;">
-                    <span style="background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 50px; font-size: 12px;"><i class="fas fa-dice"></i> Strateji</span>
-                    <span style="background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 50px; font-size: 12px;"><i class="fas fa-users"></i> Çok oyunculu</span>
+                <div style="margin: 20px 0;">
+                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
+                        <i class="fas fa-dice"></i> Strateji
+                    </span>
+                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
+                        <i class="fas fa-users"></i> Çok Oyunculu
+                    </span>
                 </div>
-                <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn btn-small btn-outline" style="margin-top: 25px; width: 100%;">
-                    <i class="fab fa-discord"></i> Beta katılım
+                <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn btn-outline" style="width: 100%;">
+                    <i class="fab fa-discord"></i> Beta'ya Katıl
                 </a>
             </div>
-            <!-- JARVIS - YENİ PROJE -->
+
+            <!-- JARVIS (YENİ!) -->
             <div class="card">
-                <span class="card-badge badge-blue">🔵 Geliştiriliyor</span>
-                <h3><i class="fas fa-microchip"></i> Jarvis</h3>
-                <p style="font-size: 14px; color: #a0a0a0; margin-bottom: 8px;">AI Asistan · 2026</p>
-                <p>Kişisel yapay zeka asistanı. Discord botu ve web arayüzü ile entegre, akıllı sohbet, hatırlatıcı, görev yönetimi ve daha fazlası.</p>
-                <div style="display: flex; gap: 10px; margin-top: 25px;">
-                    <span style="background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 50px; font-size: 12px;"><i class="fas fa-brain"></i> AI</span>
-                    <span style="background: rgba(255,255,255,0.05); padding: 4px 12px; border-radius: 50px; font-size: 12px;"><i class="fas fa-comment"></i> Sohbet</span>
+                <span class="card-badge badge-orange" style="background: rgba(230,126,34,0.15); color: #e67e22;">⚡ Geliştiriliyor</span>
+                <h3><i class="fas fa-brain"></i> Jarvis AI</h3>
+                <p style="font-size: 14px; color: var(--text-secondary);">Yapay Zeka Asistanı</p>
+                <p>Gelişmiş yapay zeka ile Discord sunucunuzda akıllı sohbet, otomatik moderasyon ve daha fazlası. Doğal dil işleme ve makine öğrenimi ile güçlendirilmiş.</p>
+                <div style="margin: 20px 0;">
+                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
+                        <i class="fas fa-microchip"></i> AI
+                    </span>
+                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
+                        <i class="fas fa-comment"></i> Doğal Sohbet
+                    </span>
+                    <span style="display: inline-block; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 30px; margin: 5px;">
+                        <i class="fas fa-robot"></i> Otomatik Mod
+                    </span>
                 </div>
-                <a href="#" class="btn btn-small btn-outline" style="margin-top: 25px; width: 100%;">
-                    <i class="fas fa-info-circle"></i> Detaylar
+                <a href="#" class="btn btn-outline" style="width: 100%;">
+                    <i class="fas fa-hourglass-half"></i> Yakında
                 </a>
             </div>
         </div>
 
-        <!-- YAKINDA -->
-        <div style="margin-top: 80px; text-align: center;">
-            <span style="background: rgba(255,255,255,0.05); padding: 8px 24px; border-radius: 50px; font-size: 14px; color: #a0a0a0;">
-                <i class="fas fa-hourglass-half"></i> Daha fazla proje yolda
-            </span>
-        </div>
+        <!-- YOL HARİTASI -->
+        <section style="padding: 80px 0;">
+            <h2 class="section-title">Proje Yol Haritası</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h4>İlk Adım</h4>
+                        <p>Zeinth Moderation'ın temelleri atıldı. İlk komutlar yazıldı.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h4>Ekonomi Devrimi</h4>
+                        <p>33 ekonomi komutu, hisse senedi, evcil hayvan, iş sistemi eklendi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026</div>
+                    <div class="timeline-content">
+                        <h4>Zenith Studios</h4>
+                        <p>72+ komut, web sitesi, dashboard, Chaos Market ve Jarvis AI geliştiriliyor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-socials">
                 <a href="https://github.com/westabdu" target="_blank"><i class="fab fa-github"></i></a>
@@ -92,12 +137,5 @@
             <p>© 2026 Zeinth Studios. Projeler sürekli güncellenir.</p>
         </footer>
     </div>
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        });
-    </script>
 </body>
 </html>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeinth Studios | Ana Sayfa</title>
-    <meta name="description" content="Zeinth Studios - Discord bot geliştirme, oyun yapımı ve dijital çözümler.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,8 +11,8 @@
 <body>
     <div class="container">
         <!-- NAVBAR -->
-        <nav class="navbar" id="navbar">
-            <div class="logo"><i class="fas fa-crown"></i> Zeinth</div>
+        <nav class="navbar">
+            <div class="logo">Zeinth Studios</div>
             <div class="nav-links">
                 <a href="index.html" class="active">Ana Sayfa</a>
                 <a href="projects.html">Projeler</a>
@@ -26,72 +25,78 @@
             </div>
         </nav>
 
-        <!-- HERO -->
-        <section class="hero-content" style="padding: 100px 0 80px; text-align: center;">
-            <span class="gradient-text" style="background: linear-gradient(135deg, #5865F2, #9B59B6); padding: 8px 20px; border-radius: 50px; display: inline-block; margin-bottom: 20px; font-weight: 600;">
-                <i class="fas fa-code"></i> Zenith Studios
-            </span>
-            <h1 style="font-size: 72px; font-weight: 800; margin: 20px 0; line-height: 1.1; background: linear-gradient(135deg, #fff, #c0c0ff); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                Hayal et, <br>kodla, yayınla.
-            </h1>
-            <p style="font-size: 20px; color: #b0b0b0; max-width: 700px; margin: 0 auto 40px;">
-                Discord bot geliştirme, oyun yapımı ve dijital çözümler. <br>17 yaşında, Mersin'de başlayan bir yazılım hikayesi.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="projects.html" class="btn">
-                    <i class="fas fa-rocket"></i> Projeleri İncele
-                </a>
-                <a href="dashboard.html" class="btn btn-outline">
-                    <i class="fas fa-chart-pie"></i> Bot Dashboard
-                </a>
+        <!-- HERO BÖLÜMÜ -->
+        <section style="min-height: 80vh; display: flex; align-items: center;">
+            <div style="width: 100%;">
+                <span class="section-title" style="display: inline-block; margin-bottom: 20px;">Hoş Geldiniz</span>
+                <h1 style="font-size: 72px; font-weight: 800; margin-bottom: 20px; line-height: 1.1;">
+                    <span style="background: linear-gradient(135deg, #fff, #e0e0ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hayal et,</span><br>
+                    <span style="background: var(--gradient-1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">kodla, yayınla.</span>
+                </h1>
+                <p style="font-size: 20px; color: var(--text-secondary); max-width: 600px; margin-bottom: 40px;">
+                    Discord bot geliştirme, oyun yapımı ve dijital çözümler. 
+                    17 yaşında, Mersin'de başlayan bir yazılım hikayesi.
+                </p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="projects.html" class="btn">
+                        <i class="fas fa-rocket"></i> Projeleri İncele
+                    </a>
+                    <a href="dashboard.html" class="btn btn-outline">
+                        <i class="fas fa-chart-line"></i> Canlı Dashboard
+                    </a>
+                </div>
+
+                <!-- İSTATİSTİKLER -->
+                <div class="stat-grid" style="margin-top: 60px;">
+                    <div class="stat-card">
+                        <div class="stat-number">72+</div>
+                        <div>Discord Komutu</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7/24</div>
+                        <div>Aktif Bot</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">33</div>
+                        <div>Ekonomi Komutu</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div>Aktif Proje</div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- ÖNE ÇIKANLAR (3 ÖZELLİK) -->
-        <section style="padding: 80px 0;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-                <div class="fade-in" style="text-align: center;">
-                    <div style="font-size: 48px; margin-bottom: 20px; color: #5865F2;">⚡</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">72+ Komut</h3>
-                    <p style="color: #b0b0b0;">Ekonomi, moderasyon, eğlence, seviye. Devasa bot altyapısı.</p>
-                </div>
-                <div class="fade-in" style="text-align: center; animation-delay: 0.2s;">
-                    <div style="font-size: 48px; margin-bottom: 20px; color: #9B59B6;">☁️</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">7/24 Aktif</h3>
-                    <p style="color: #b0b0b0;">Koyeb üzerinde Docker container, sürekli çalışır.</p>
-                </div>
-                <div class="fade-in" style="text-align: center; animation-delay: 0.4s;">
-                    <div style="font-size: 48px; margin-bottom: 20px; color: #2ecc71;">🎮</div>
-                    <h3 style="font-size: 22px; margin-bottom: 12px;">Chaos Market</h3>
-                    <p style="color: #b0b0b0;">Geliştirilen ilk oyun projesi. Yakında.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- YENİ ÖZELLİKLER TANITIMI (kartlar) -->
-        <section style="padding: 60px 0;">
-            <h2 class="section-title">✨ Yeni Özellikler</h2>
+        <!-- ÖZELLİKLER -->
+        <section style="padding: 100px 0;">
+            <h2 class="section-title">Öne Çıkan Özellikler</h2>
             <div class="card-grid">
                 <div class="card">
-                    <h3><i class="fas fa-robot" style="color: #5865F2;"></i> Özel Komutlar</h3>
-                    <p>Sunucu sahipleri kendi özel komutlarını oluşturabilir. `/komut-ekle` ile kolayca ekleyin!</p>
+                    <i class="fas fa-robot" style="font-size: 48px; color: var(--accent-blue); margin-bottom: 20px;"></i>
+                    <h3>Gelişmiş Bot</h3>
+                    <p>70'in üzerinde komut, tamamen özelleştirilebilir moderasyon, ekonomi ve eğlence sistemleri.</p>
                 </div>
                 <div class="card">
-                    <h3><i class="fas fa-shield-alt" style="color: #9B59B6;"></i> Gelişmiş Log Sistemi</h3>
-                    <p>Rol, kanal, üye değişimleri, mesaj silme/düzenleme, ses kanalı hareketleri... Her şey kayıt altında.</p>
+                    <i class="fas fa-chart-line" style="font-size: 48px; color: var(--accent-purple); margin-bottom: 20px;"></i>
+                    <h3>Gerçek Zamanlı Dashboard</h3>
+                    <p>Anlık bot istatistikleri, sunucu analizleri ve canlı veri takibi.</p>
                 </div>
                 <div class="card">
-                    <h3><i class="fas fa-gavel" style="color: #e67e22;"></i> Otomatik Uyarı Sistemi</h3>
-                    <p>Belirlediğiniz uyarı sayısına ulaşan kullanıcılar otomatik olarak mute veya ban yer.</p>
+                    <i class="fas fa-gamepad" style="font-size: 48px; color: #e67e22; margin-bottom: 20px;"></i>
+                    <h3>Chaos Market</h3>
+                    <p>Geliştirilmekte olan, sıradışı market simülasyonu oyunu.</p>
                 </div>
             </div>
         </section>
 
         <!-- CTA -->
-        <div style="background: linear-gradient(145deg, rgba(88,101,242,0.1), rgba(155,89,182,0.1)); border-radius: 40px; padding: 60px; text-align: center; margin: 60px 0;">
-            <h2 style="font-size: 36px; margin-bottom: 20px;">Discord topluluğuna katıl</h2>
-            <p style="color: #b0b0b0; max-width: 600px; margin: 0 auto 30px;">Gelişmeleri takip et, beta testlerine katıl, fikirlerini paylaş.</p>
-            <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn" style="padding: 16px 48px;">
+        <div style="background: var(--gradient-1); border-radius: 40px; padding: 80px; text-align: center; margin: 60px 0;">
+            <h2 style="font-size: 48px; margin-bottom: 20px;">Topluluğa Katıl</h2>
+            <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px;">
+                Gelişmeleri takip et, beta testlerine katıl, fikirlerini paylaş.
+            </p>
+            <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn" style="background: white; color: var(--accent-blue);">
                 <i class="fab fa-discord"></i> Katıl
             </a>
         </div>
@@ -106,17 +111,5 @@
             <p>© 2026 Zeinth Studios. Tüm hakları saklıdır. | Kod: Abdurahman</p>
         </footer>
     </div>
-
-    <!-- Navbar scroll efekti için basit JS -->
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
 </body>
 </html>

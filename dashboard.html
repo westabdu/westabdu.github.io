@@ -3,84 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeinth Studios | Bot Dashboard</title>
-    <meta name="description" content="Zeinth Moderation bot dashboard - Anlık istatistikler, komut sayıları, uptime.">
+    <title>Zeinth Studios | Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .stat-panel {
-            background: rgba(255,255,255,0.02);
-            border-radius: 30px;
-            padding: 40px;
-            border: 1px solid rgba(255,255,255,0.05);
-            margin-bottom: 40px;
-        }
-        .stat-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin: 40px 0;
-        }
-        .stat-big {
-            background: rgba(0,0,0,0.2);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: 0.3s;
-        }
-        .stat-big:hover {
-            border-color: #5865F2;
-            background: rgba(88,101,242,0.05);
-        }
-        .stat-big .number {
-            font-size: 52px;
-            font-weight: 800;
-            background: linear-gradient(45deg, #5865F2, #9B59B6);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
-        }
-        .mini-badge {
-            background: rgba(255,255,255,0.05);
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 12px;
-            color: #a0a0a0;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .progress-section {
-            background: rgba(0,0,0,0.2);
-            border-radius: 16px;
-            padding: 20px;
-        }
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 4px;
-            margin: 10px 0;
-        }
-        .progress-fill {
-            height: 8px;
-            background: linear-gradient(90deg, #5865F2, #9B59B6);
-            border-radius: 4px;
-        }
-        @media (max-width: 900px) {
-            .stat-row { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 600px) {
-            .stat-row { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
         <nav class="navbar">
-            <div class="logo"><i class="fas fa-crown"></i> Zeinth</div>
+            <div class="logo">Zeinth Studios</div>
             <div class="nav-links">
                 <a href="index.html">Ana Sayfa</a>
                 <a href="projects.html">Projeler</a>
@@ -93,95 +24,92 @@
             </div>
         </nav>
 
-        <section style="padding: 60px 0 20px; text-align: center;">
-            <h1 style="font-size: 48px; font-weight: 800; margin-bottom: 10px;">📊 Bot Dashboard</h1>
-            <p style="color: #b0b0b0; font-size: 18px;">Zeinth Moderation · Gerçek zamanlı istatistikler</p>
+        <section style="text-align: center; padding: 60px 0;">
+            <h1 class="section-title">Bot Dashboard</h1>
+            <p style="color: var(--text-secondary);">Gerçek zamanlı bot istatistikleri</p>
         </section>
 
-        <!-- ANA İSTATİSTİKLER (Canlı veri JS ile güncellenecek) -->
-        <div class="stat-panel">
-            <div class="stat-row">
-                <div class="stat-big">
-                    <div class="number" id="totalCommands">72+</div>
-                    <div style="color: #fff; font-size: 18px; margin-top: 10px;">Toplam Komut</div>
-                    <span class="mini-badge"><i class="fas fa-tag"></i> 33 ekonomi</span>
-                </div>
-                <div class="stat-big">
-                    <div class="number" id="serverCount">1</div>
-                    <div style="color: #fff; font-size: 18px; margin-top: 10px;">Aktif Sunucu</div>
-                    <span class="mini-badge"><i class="fas fa-lock"></i> özel</span>
-                </div>
-                <div class="stat-big">
-                    <div class="number" id="uptime">7/24</div>
-                    <div style="color: #fff; font-size: 18px; margin-top: 10px;">Uptime</div>
-                    <span class="mini-badge"><i class="fas fa-cloud"></i> Koyeb</span>
-                </div>
+        <!-- İSTATİSTİKLER -->
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalCommands">72+</div>
+                <div>Toplam Komut</div>
+                <span style="font-size: 12px; color: var(--text-secondary);">33 ekonomi</span>
             </div>
+            <div class="stat-card">
+                <div class="stat-number" id="serverCount">1</div>
+                <div>Aktif Sunucu</div>
+                <span style="font-size: 12px; color: var(--text-secondary);">özel</span>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="uptime">7/24</div>
+                <div>Uptime</div>
+                <span style="font-size: 12px; color: var(--text-secondary);">Koyeb</span>
+            </div>
+        </div>
 
-            <!-- KOMPOZİSYON ÇUBUĞU (sabit yüzdeler) -->
-            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px;">
-                <div class="progress-section">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                        <span style="color: #fff;">Komut Kategorileri</span>
-                        <span style="color: #5865F2;">72/72</span>
+        <!-- KOMPOZİSYON ÇUBUKLARI -->
+        <div style="background: var(--card-bg); backdrop-filter: blur(10px); border-radius: 30px; padding: 40px; margin: 40px 0;">
+            <h2 style="margin-bottom: 30px;">Komut Dağılımı</h2>
+            <div class="progress-container">
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span>Ekonomi</span>
+                        <span>33</span>
                     </div>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
-                            <span>Ekonomi</span>
-                            <span>33</span>
-                        </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 46%;"></div></div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
-                            <span>Moderasyon</span>
-                            <span>16</span>
-                        </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 22%;"></div></div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
-                            <span>Eğlence</span>
-                            <span>5</span>
-                        </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 7%;"></div></div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
-                            <span>Seviye</span>
-                            <span>4</span>
-                        </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 5.5%;"></div></div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; justify-content: space-between; font-size: 14px; color: #a0a0a0;">
-                            <span>Özel Komutlar</span>
-                            <span>3</span>
-                        </div>
-                        <div class="progress-bar"><div class="progress-fill" style="width: 4%;"></div></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 46%;"></div>
                     </div>
                 </div>
-                <div class="progress-section" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                    <i class="fas fa-check-circle" style="font-size: 48px; color: #2ecc71; margin-bottom: 15px;"></i>
-                    <h3 style="font-size: 22px;">Sistem Çevrimiçi</h3>
-                    <p style="color: #a0a0a0; text-align: center;">Son 30 günde 0 kesinti</p>
-                    <span class="mini-badge" style="margin-top: 15px;"><i class="fas fa-user"></i> 1 geliştirici</span>
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span>Moderasyon</span>
+                        <span>16</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 22%;"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span>Eğlence</span>
+                        <span>8</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 11%;"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span>Seviye</span>
+                        <span>4</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 5.5%;"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-header">
+                        <span>Özel Komutlar</span>
+                        <span>3</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 4%;"></div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- KONTROL PANELİ (hazır) -->
-        <div style="margin: 60px 0;">
-            <div class="card" style="text-align: center; padding: 50px;">
-                <i class="fas fa-code-branch" style="font-size: 64px; color: #5865F2; margin-bottom: 25px;"></i>
-                <h2 style="font-size: 32px; margin-bottom: 15px;">Kontrol Paneli (Yapım Aşamasında)</h2>
-                <p style="color: #a0a0a0; max-width: 600px; margin: 0 auto 30px;">
-                    Botumuz için web tabanlı bir kontrol paneli geliştiriliyor. Yakında sunucu yöneticileri komutları, ekonomiyi ve kullanıcı verilerini bu panel üzerinden yönetebilecek.
-                </p>
-                <span class="card-badge badge-blue" style="font-size: 14px; padding: 8px 30px;">
-                    <i class="fas fa-hourglass-half"></i> Yakında
-                </span>
-            </div>
+        <!-- KONTROL PANELİ -->
+        <div style="background: var(--gradient-1); border-radius: 40px; padding: 60px; text-align: center; margin: 40px 0;">
+            <i class="fas fa-code-branch" style="font-size: 64px; margin-bottom: 20px;"></i>
+            <h2 style="font-size: 36px; margin-bottom: 15px;">Kontrol Paneli</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px;">
+                Web tabanlı kontrol paneli geliştiriliyor. Yakında sunucu ayarlarını web'den yönetebileceksiniz.
+            </p>
+            <span style="background: rgba(255,255,255,0.2); padding: 10px 30px; border-radius: 50px;">
+                <i class="fas fa-hourglass-half"></i> Yakında
+            </span>
         </div>
 
         <footer class="footer">
@@ -190,25 +118,21 @@
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank"><i class="fab fa-discord"></i></a>
                 <a href="mailto:iletisim@zenith.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>© 2026 Zeinth Studios · Dashboard v1.0 · Gerçek zamanlı veriler aktif</p>
+            <p>© 2026 Zeinth Studios · Gerçek zamanlı veriler</p>
         </footer>
     </div>
 
-    <!-- JavaScript: Gerçek zamanlı veri çekme -->
     <script>
         async function fetchBotStats() {
             try {
-                // 🔁 BOTUN KOYEB URL'SİNİ BURAYA YAZ (kendi URL'n ile değiştir!)
                 const API_URL = 'https://fiscal-truda-zeinthstudios-f319c15e.koyeb.app/api/bot-stats';
                 const response = await fetch(API_URL);
                 const data = await response.json();
 
                 if (data.success) {
-                    // Toplam komut sayısı (data.totalCommands)
                     document.getElementById('totalCommands').innerText = data.data.totalCommands + '+';
-                    // Aktif sunucu sayısı
                     document.getElementById('serverCount').innerText = data.data.serverCount;
-                    // Uptime (saniye -> gün/saat formatı)
+                    
                     const uptimeSeconds = data.data.uptime;
                     const hours = Math.floor(uptimeSeconds / 3600);
                     const days = Math.floor(hours / 24);
@@ -216,17 +140,13 @@
                         document.getElementById('uptime').innerText = days + ' gün';
                     } else if (hours > 0) {
                         document.getElementById('uptime').innerText = hours + ' saat';
-                    } else {
-                        document.getElementById('uptime').innerText = '7/24';
                     }
                 }
             } catch (error) {
                 console.error('API hatası:', error);
-                // Hata durumunda mevcut değerler kalsın.
             }
         }
 
-        // Sayfa yüklendiğinde ve her 60 saniyede bir güncelle
         window.addEventListener('load', fetchBotStats);
         setInterval(fetchBotStats, 60000);
     </script>

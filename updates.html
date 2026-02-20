@@ -4,54 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeinth Studios | Güncellemeler</title>
-    <meta name="description" content="Zeinth Studios güncelleme notları, blog ve duyurular.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .timeline-item {
-            display: flex;
-            gap: 25px;
-            background: rgba(255,255,255,0.02);
-            border-radius: 24px;
-            padding: 30px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: 0.3s;
-        }
-        .timeline-item:hover {
-            border-color: #5865F2;
-            background: rgba(88,101,242,0.05);
-        }
-        .timeline-date {
-            min-width: 100px;
-            font-weight: 700;
-            color: #5865F2;
-            font-size: 16px;
-        }
-        .timeline-content h3 {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-        .timeline-content p {
-            color: #b0b0b0;
-            font-size: 15px;
-        }
-        @media (max-width: 600px) {
-            .timeline-item { flex-direction: column; gap: 10px; }
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <nav class="navbar" id="navbar">
-            <div class="logo"><i class="fas fa-crown"></i> Zeinth</div>
+        <nav class="navbar">
+            <div class="logo">Zeinth Studios</div>
             <div class="nav-links">
                 <a href="index.html">Ana Sayfa</a>
                 <a href="projects.html">Projeler</a>
@@ -64,48 +24,35 @@
             </div>
         </nav>
 
-        <section style="padding: 60px 0 20px; text-align: center;">
-            <h1 class="section-title">📰 Güncelleme Notları</h1>
-            <p style="color: #b0b0b0; max-width: 600px; margin: 0 auto 40px;">Son değişiklikler, yeni özellikler ve proje güncellemeleri.</p>
+        <section style="text-align: center; padding: 60px 0;">
+            <h1 class="section-title">Güncelleme Notları</h1>
+            <p style="color: var(--text-secondary);">Son değişiklikler ve yeni özellikler</p>
         </section>
 
+        <!-- GÜNCELLEMELER -->
         <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">20.02.2026</div>
+                <div class="timeline-content">
+                    <h3>🤖 Jarvis AI Duyuruldu</h3>
+                    <p>Yeni yapay zeka projemiz Jarvis üzerinde çalışmalar başladı. Gelişmiş sohbet ve moderasyon özellikleri.</p>
+                    <span style="display: inline-block; margin-top: 10px; background: rgba(46,204,113,0.1); padding: 5px 15px; border-radius: 50px; color: #2ecc71;">Yeni</span>
+                </div>
+            </div>
             <div class="timeline-item">
                 <div class="timeline-date">14.02.2026</div>
                 <div class="timeline-content">
                     <h3>⚡ Gerçek Zamanlı Dashboard</h3>
-                    <p>Web sitemizin dashboard sayfası artık bot API'sinden gerçek zamanlı veri çekiyor. Anlık komut sayısı, sunucu istatistikleri ve uptime bilgisi canlı olarak görüntülenebiliyor.</p>
-                    <span style="display: inline-block; margin-top: 12px; background: rgba(46,204,113,0.1); padding: 4px 12px; border-radius: 50px; font-size: 12px; color: #2ecc71;">Yeni</span>
+                    <p>Dashboard artık bot API'sinden canlı veri çekiyor. Anlık istatistikler ve uptime bilgisi.</p>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-date">13.02.2026</div>
                 <div class="timeline-content">
-                    <h3>✨ Özel Komutlar Eklendi</h3>
-                    <p>Sunucu yöneticileri artık `/komut-ekle`, `/komut-sil` ve `/komut-list` komutlarıyla kendi özel komutlarını oluşturabilirler. Bot artık 72+ komutla çalışıyor.</p>
+                    <h3>✨ Özel Komutlar</h3>
+                    <p>Sunucu yöneticileri artık `/komut-ekle` ile kendi özel komutlarını oluşturabilir.</p>
                 </div>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">12.02.2026</div>
-                <div class="timeline-content">
-                    <h3>✨ Yeni: Kayıt Sistemi</h3>
-                    <p>Butonlu kayıt sistemi eklendi. Kullanıcılar tek tıkla kayıt olabiliyor, otomatik rol yönetimi. Discord botuna entegre edildi.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-date">10.02.2026</div>
-                <div class="timeline-content">
-                    <h3>🚀 Ekonomi Devası Tamamlandı</h3>
-                    <p>33 ekonomi komutu: hisse senedi, evcil hayvan, iş sistemi, market, loto, kumar, banka, günlük ödüller. Bot artık 68 komutla çalışıyor.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- YAKINDA -->
-        <div style="margin-top: 80px; text-align: center;">
-            <span style="background: rgba(255,255,255,0.05); padding: 12px 30px; border-radius: 50px; color: #a0a0a0;">
-                <i class="fas fa-bell"></i> Yeni güncellemeler için Discord'u takip et
-            </span>
         </div>
 
         <footer class="footer">
@@ -114,15 +61,8 @@
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank"><i class="fab fa-discord"></i></a>
                 <a href="mailto:iletisim@zenith.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>© 2026 Zeinth Studios · Son güncelleme: 14.02.2026</p>
+            <p>© 2026 Zeinth Studios · Son güncelleme: 20.02.2026</p>
         </footer>
     </div>
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        });
-    </script>
 </body>
 </html>
