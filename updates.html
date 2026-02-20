@@ -3,55 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeinth Studios | Güncellemeler</title>
+    <title>Zeinth | Güncellemeler</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+    
+    <div class="cyber-grid"></div>
+    <div class="grid-highlight"></div>
+
     <div class="container">
         <nav class="navbar">
-            <div class="logo">Zeinth Studios</div>
+            <div class="logo">ZEINTH<span>studios</span></div>
             <div class="nav-links">
-                <a href="index.html">Ana Sayfa</a>
-                <a href="projects.html">Projeler</a>
-                <a href="dashboard.html">Dashboard</a>
-                <a href="updates.html" class="active">Güncellemeler</a>
-                <a href="about.html">Hakkımda</a>
+                <a href="index.html">ANA SAYFA</a>
+                <a href="projects.html">PROJELER</a>
+                <a href="dashboard.html">DASHBOARD</a>
+                <a href="updates.html" class="active">GÜNCELLEMELER</a>
+                <a href="about.html">HAKKIMDA</a>
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="nav-btn">
-                    <i class="fab fa-discord"></i> Discord
+                    <i class="fab fa-discord"></i> DISCORD
                 </a>
             </div>
         </nav>
 
         <section style="text-align: center; padding: 60px 0;">
-            <h1 class="section-title">Güncelleme Notları</h1>
-            <p style="color: var(--text-secondary);">Son değişiklikler ve yeni özellikler</p>
+            <h1 class="section-title">GÜNCELLEME GÜNLÜĞÜ</h1>
+            <p style="color: var(--text-secondary);">Terminal'de son değişiklikler</p>
         </section>
 
-        <!-- GÜNCELLEMELER -->
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-date">20.02.2026</div>
-                <div class="timeline-content">
-                    <h3>🤖 Jarvis AI Duyuruldu</h3>
-                    <p>Yeni yapay zeka projemiz Jarvis üzerinde çalışmalar başladı. Gelişmiş sohbet ve moderasyon özellikleri.</p>
-                    <span style="display: inline-block; margin-top: 10px; background: rgba(46,204,113,0.1); padding: 5px 15px; border-radius: 50px; color: #2ecc71;">Yeni</span>
-                </div>
+        <!-- TERMINAL CHANGELOG -->
+        <div class="terminal">
+            <div class="terminal-header">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-path">~/zeinth/updates</span>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">14.02.2026</div>
-                <div class="timeline-content">
-                    <h3>⚡ Gerçek Zamanlı Dashboard</h3>
-                    <p>Dashboard artık bot API'sinden canlı veri çekiyor. Anlık istatistikler ve uptime bilgisi.</p>
-                </div>
+            
+            <div class="terminal-line" style="animation-delay: 0.1s;">
+                <span class="prompt">$</span>
+                <span class="command">git log --oneline -n 5</span>
             </div>
-            <div class="timeline-item">
-                <div class="timeline-date">13.02.2026</div>
-                <div class="timeline-content">
-                    <h3>✨ Özel Komutlar</h3>
-                    <p>Sunucu yöneticileri artık `/komut-ekle` ile kendi özel komutlarını oluşturabilir.</p>
-                </div>
+            
+            <div class="terminal-line" style="animation-delay: 0.2s;">
+                <span class="output">v2.1.4 (HEAD -> main) Jarvis AI üçlü model entegrasyonu tamamlandı</span>
+            </div>
+            
+            <div class="terminal-line" style="animation-delay: 0.3s;">
+                <span class="output">v2.1.3 Dashboard'a gerçek zamanlı istatistikler eklendi</span>
+            </div>
+            
+            <div class="terminal-line" style="animation-delay: 0.4s;">
+                <span class="output">v2.1.2 Chaos Market oyun motoru iyileştirmeleri</span>
+            </div>
+            
+            <div class="terminal-line" style="animation-delay: 0.5s;">
+                <span class="output">v2.1.1 Zeinth Moderation'a özel komut sistemi eklendi</span>
+            </div>
+            
+            <div class="terminal-line" style="animation-delay: 0.6s;">
+                <span class="output">v2.1.0 Web sitesi monochrome & glass temaya güncellendi</span>
+            </div>
+            
+            <div class="terminal-line" style="animation-delay: 0.7s;">
+                <span class="prompt">$</span>
+                <span class="command">_</span>
             </div>
         </div>
 
@@ -59,9 +79,9 @@
             <div class="footer-socials">
                 <a href="https://github.com/westabdu" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank"><i class="fab fa-discord"></i></a>
-                <a href="mailto:iletisim@zenith.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:zeinth@zenith.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <p>© 2026 Zeinth Studios · Son güncelleme: 20.02.2026</p>
+            <p>© 2026 ZEINTH STUDIOS · GELECEĞİ KODLUYORUZ</p>
         </footer>
     </div>
 </body>

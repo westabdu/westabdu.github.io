@@ -3,134 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeinth Studios | Ana Sayfa</title>
+    <title>Zeinth | AI & Yazılım Geliştirici</title>
+    <meta name="description" content="Zeinth - 17 yaşında, Mersin'de başlayan bir yazılım hikayesi. AI geliştirme, Discord botları ve oyun projeleri.">
+    <meta name="keywords" content="Zeinth, Yazılım Geliştirici, Discord Bot, AI, Jarvis, Chaos Market">
+    <meta name="author" content="Abdurahman">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="particles"></div>
+    <!-- Özel Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+    
+    <!-- Cyber Grid -->
+    <div class="cyber-grid" id="cyberGrid"></div>
+    <div class="grid-highlight" id="gridHighlight"></div>
 
     <div class="container">
+        <!-- GLASS NAVBAR -->
         <nav class="navbar">
-            <div class="logo">Zeinth Studios</div>
+            <div class="logo">ZEINTH<span>studios</span></div>
             <div class="nav-links">
-                <a href="index.html" class="active">Ana Sayfa</a>
-                <a href="projects.html">Projeler</a>
-                <a href="dashboard.html">Dashboard</a>
-                <a href="updates.html">Güncellemeler</a>
-                <a href="about.html">Hakkımda</a>
+                <a href="index.html" class="active">ANA SAYFA</a>
+                <a href="projects.html">PROJELER</a>
+                <a href="dashboard.html">DASHBOARD</a>
+                <a href="updates.html">GÜNCELLEMELER</a>
+                <a href="about.html">HAKKIMDA</a>
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="nav-btn">
-                    <i class="fab fa-discord"></i> Discord
+                    <i class="fab fa-discord"></i> DISCORD
                 </a>
             </div>
         </nav>
 
-        <!-- HERO -->
+        <!-- HERO WITH TYPEWRITER -->
         <section style="min-height: 80vh; display: flex; align-items: center;">
-            <div>
-                <span style="color: var(--neon-cyan); font-size: 20px; display: block; margin-bottom: 20px; animation: glowPulse 2s infinite;">
+            <div style="width: 100%;">
+                <span style="color: var(--neon-blue); font-size: 18px; letter-spacing: 3px; margin-bottom: 20px; display: block;">
                     ✦ HOŞ GELDİN ✦
                 </span>
-                <h1 style="font-size: 80px; font-weight: 800; line-height: 1.1; margin-bottom: 30px;">
-                    <span style="background: linear-gradient(135deg, #fff, var(--neon-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hayal et,</span><br>
-                    <span style="background: var(--gradient-cosmic); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">kodla, yayınla.</span>
-                </h1>
-                <p style="font-size: 20px; color: var(--text-secondary); max-width: 600px; margin-bottom: 40px;">
-                    Discord bot geliştirme, yapay zeka, oyun yapımı ve dijital çözümler. 
-                    17 yaşında başlayan bir yazılım hikayesi.
+                
+                <div class="typewriter-container">
+                    <div class="typewriter-text" id="typewriter"></div>
+                </div>
+                
+                <p style="font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 40px 0; line-height: 1.8;">
+                    17 yaşında, Mersin'de başlayan bir yazılım hikayesi. 
+                    AI geliştirme, Discord botları ve oyun projeleriyle geleceği kodluyorum.
                 </p>
+                
                 <div style="display: flex; gap: 20px;">
                     <a href="projects.html" class="btn">
-                        <i class="fas fa-rocket"></i> Projeleri Keşfet
+                        <i class="fas fa-rocket"></i> PROJELERİ KEŞFET
                     </a>
                     <a href="dashboard.html" class="btn btn-outline">
-                        <i class="fas fa-chart-line"></i> Canlı Dashboard
+                        <i class="fas fa-chart-line"></i> CANLI DASHBOARD
                     </a>
                 </div>
-
-                <!-- İSTATİSTİKLER -->
-                <div class="stat-grid" style="margin-top: 60px;">
-                    <div class="stat-card">
-                        <div class="stat-number">72+</div>
-                        <div>Komut</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">7/24</div>
-                        <div>Aktif</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">3</div>
-                        <div>AI Model</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">4</div>
-                        <div>Proje</div>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- ÖZELLİKLER -->
-        <section style="padding: 100px 0;">
-            <h2 class="section-title">Neler Yapıyoruz?</h2>
+        <!-- STATS CARDS -->
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-number">72+</div>
+                <div>DISCORD KOMUTU</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">7/24</div>
+                <div>AKTİF BOT</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div>AI MODEL</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div>AKTİF PROJE</div>
+            </div>
+        </div>
+
+        <!-- FEATURED PROJECTS -->
+        <section style="padding: 80px 0;">
+            <h2 class="section-title">ÖNE ÇIKAN PROJELER</h2>
             <div class="card-grid">
-                <div class="card">
-                    <i class="fas fa-robot" style="font-size: 48px; color: var(--neon-cyan); margin-bottom: 20px;"></i>
-                    <h3>Discord Botları</h3>
-                    <p>Gelişmiş moderasyon, ekonomi ve eğlence botları. 70'in üzerinde komut, tamamen özelleştirilebilir.</p>
+                <div class="card glow-border">
+                    <i class="fas fa-robot" style="font-size: 48px; color: var(--neon-blue); margin-bottom: 20px;"></i>
+                    <h3>ZEINTH MODERATION</h3>
+                    <p style="color: var(--text-secondary);">70+ komut, gelişmiş moderasyon, ekonomi ve seviye sistemi. Tamamen özelleştirilebilir.</p>
+                    <div class="progress-container" style="margin-top: 30px;">
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Tamamlanma</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-brain" style="font-size: 48px; color: var(--neon-pink); margin-bottom: 20px;"></i>
-                    <h3>Yapay Zeka</h3>
-                    <p>Jarvis AI - Kendi kendine öğrenen, üçlü model ile çalışan gelişmiş yapay zeka asistanı.</p>
+                
+                <div class="card glow-border">
+                    <i class="fas fa-brain" style="font-size: 48px; color: var(--neon-blue); margin-bottom: 20px;"></i>
+                    <h3>JARVIS AI</h3>
+                    <p style="color: var(--text-secondary);">Üçlü AI modeli ile çalışan, kendi kendine öğrenen gelişmiş yapay zeka asistanı.</p>
+                    <div class="progress-container" style="margin-top: 30px;">
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Geliştirme</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <i class="fas fa-gamepad" style="font-size: 48px; color: var(--neon-purple); margin-bottom: 20px;"></i>
-                    <h3>Oyun Geliştirme</h3>
-                    <p>Chaos Market - Sıradışı, kaotik, çok oyunculu market simülasyonu.</p>
+                
+                <div class="card glow-border">
+                    <i class="fas fa-gamepad" style="font-size: 48px; color: var(--neon-blue); margin-bottom: 20px;"></i>
+                    <h3>CHAOS MARKET</h3>
+                    <p style="color: var(--text-secondary);">Çok oyunculu, kaotik market simülasyonu. Strateji ve ticaret bir arada.</p>
+                    <div class="progress-container" style="margin-top: 30px;">
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Geliştirme</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- JARVIS TANITIM -->
-        <section class="jarvis-section">
-            <h2 style="font-size: 48px; text-align: center; margin-bottom: 30px;">
-                <span class="glow-text" style="color: var(--neon-cyan);">JARVIS</span>
-                <span style="background: var(--gradient-cosmic); -webkit-background-clip: text;">AI</span>
-            </h2>
-            <p style="text-align: center; color: var(--text-secondary); max-width: 800px; margin: 0 auto 40px;">
-                Üç farklı yapay zeka modelini aynı anda kullanan, kendi kendine öğrenen, sürekli gelişen bir beyin algoritması.
+        <!-- GLASS CTA -->
+        <div style="background: var(--bg-card); backdrop-filter: blur(30px); border: 1px solid var(--glass-border); border-radius: 50px; padding: 80px; text-align: center; margin: 60px 0;">
+            <h2 style="font-size: 48px; margin-bottom: 20px; font-family: var(--font-heading);">TOPLULUĞA KATIL</h2>
+            <p style="font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 30px;">
+                Gelişmeleri takip et, beta testlerine katıl, fikirlerini paylaş.
             </p>
-            <a href="projects.html#jarvis" class="btn" style="display: inline-block; margin: 0 auto;">
-                <i class="fas fa-microchip"></i> Keşfet
+            <a href="https://discord.gg/JW7VkEEtEz" target="_blank" class="btn" style="background: var(--neon-blue); color: var(--bg-deep);">
+                <i class="fab fa-discord"></i> KATIL
             </a>
-        </section>
+        </div>
 
+        <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-socials">
                 <a href="https://github.com/westabdu" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://discord.gg/JW7VkEEtEz" target="_blank"><i class="fab fa-discord"></i></a>
-                <a href="mailto:iletisim@zenith.com"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:zeinth@zenith.com"><i class="fas fa-envelope"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
             </div>
-            <p>© 2026 Zeinth Studios · Geleceği Kodluyoruz</p>
+            <p>© 2026 ZEINTH STUDIOS · GELECEĞİ KODLUYORUZ</p>
         </footer>
     </div>
 
     <script>
-        function createParticles() {
-            const container = document.querySelector('.particles');
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 10 + 's';
-                particle.style.animationDuration = (10 + Math.random() * 10) + 's';
-                particle.style.background = `rgba(${Math.random()*255},${Math.random()*255},${Math.random()*255},0.3)`;
-                container.appendChild(particle);
+        // CUSTOM CURSOR
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorDot = document.querySelector('.custom-cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+            cursorDot.style.transform = `translate(${e.clientX - 2}px, ${e.clientY - 2}px)`;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            cursorDot.style.opacity = '0';
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+            cursorDot.style.opacity = '1';
+        });
+
+        // GRID HIGHLIGHT EFFECT
+        const gridHighlight = document.getElementById('gridHighlight');
+        
+        document.addEventListener('mousemove', (e) => {
+            gridHighlight.style.left = e.clientX + 'px';
+            gridHighlight.style.top = e.clientY + 'px';
+        });
+
+        // TYPEWRITER EFFECT
+        const typewriterElement = document.getElementById('typewriter');
+        const texts = [
+            'HAYAL ET,',
+            'KODLA,',
+            'YAYINLA.'
+        ];
+        
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeWriter() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeWriter, 500);
+            } else {
+                setTimeout(typeWriter, isDeleting ? 50 : 100);
             }
         }
-        createParticles();
+        
+        typeWriter();
+
+        // PROGRESS BAR ANIMATION
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.progress-fill');
+                    bars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card').forEach(card => {
+            observer.observe(card);
+        });
     </script>
 </body>
 </html>
